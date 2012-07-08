@@ -4,8 +4,6 @@
 <script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
 <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
 <script type="text/javascript" src="js/grid.js"></script>
-<!-- added for speak area - move to angular controller -->
-<script type="text/javascript"  src="js/say.js"></script>
 <script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/style.css">
@@ -32,15 +30,12 @@
     </div>
 <div ng-controller="GridCtrl">
  <ul id="grid">
- <li ng-repeat="image in imageGrid">{{image.text}}
+ <li ng-repeat="image in imageGrid" ng-click="say(image.text)">{{image.text}}
  <a href="{{image.link}}">
  <img src="{{image.url}}"/>
  </a>
  </li>
  </ul>
 </div>
-<script>
-$(document).ready( $(".wordtile").click(function(){say(this)}));
-</script>
 </body>
 </html>
