@@ -2,6 +2,9 @@ HTML5-for-AAC
 =============
 
 web based app for the AAC community
+Demo - http://imedia-ventures.com/webAAC/grid2.html
+
+Demo with images (click on train for audio) http://imedia-ventures.com/testgrid/
 
 Looking for help!!! Not just coders :)
 
