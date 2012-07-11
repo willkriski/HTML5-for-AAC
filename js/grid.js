@@ -1,57 +1,13 @@
-function GridCtrl($scope){
-	
-	
-	$scope.imageGrid = [
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'I'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link: '#', text:'Mine'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Want'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'You'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Help'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'All Done'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Stop'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'That'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'What'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Away'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Go'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Here'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'It'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Like'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'More'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Again'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Big'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Do'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Down'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Get'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'In'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Little'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'My'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Off'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'On'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Out'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Put'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Some'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'There'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Up'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'All'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Bad'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Happy'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Eat'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Feel'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Drink'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Sad'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Read'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Play'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Turn'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Why'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Where'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Who'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Tell'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Not'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Now'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Me'},
-	       {type:'speak', url: 'http://placehold.it/50x50', link:'#', text:'Sad'}
-	       ];
+function EditCtrl($scope, $http){
+	$http.get('data/grid.json').success(function(data) {
+    $scope.imageGrid = data;
+  });
+}
 
+function GridCtrl($scope, $http){
+	$http.get('data/grid.json').success(function(data) {
+    $scope.imageGrid = data;
+  });
 	       $scope.say = function(text){
 	     
 	        host="http://mumble.libertus.co.uk:59125"
