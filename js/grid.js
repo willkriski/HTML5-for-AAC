@@ -1,13 +1,17 @@
-function EditCtrl($scope, $http){
-	$http.get('data/grid.json').success(function(data) {
-    $scope.imageGrid = data;
-  });
+function EditCtrl($scope, dataService){
+	
+	$scope.imageGrid = dataService.data;
+
+	$scope.toggle = function(hide) {
+		
+		this.image.hide = !hide;
+	};
 }
 
-function GridCtrl($scope, $http){
-	$http.get('data/grid.json').success(function(data) {
-    $scope.imageGrid = data;
-  });
+function GridCtrl($scope, dataService){
+	
+    $scope.imageGrid = dataService.data;
+  
 	       $scope.say = function(text){
 	     
 	        host="http://mumble.libertus.co.uk:59125"
@@ -22,3 +26,5 @@ function GridCtrl($scope, $http){
 };
 	
 }
+GridCtrl.$inject = ['$scope', 'dataService'];
+EditCtrl.$inject = ['$scope', 'dataService'];
