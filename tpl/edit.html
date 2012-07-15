@@ -1,0 +1,8 @@
+<div class="save"><a href="#/view">Done</a></div>
+<ul id="grid">
+ <li tabindex="0" ng-repeat="image in imageGrid" ng-click="toggle(image.hide)" class="dim-{{image.hide}}">{{image.text}}
+ <a href="{{image.link}}">
+ <!-- <img src="{{image.url}}"/> -->
+ </a>
+ </li>
+ </ul>

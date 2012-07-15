@@ -1,0 +1,8 @@
+<div class="edit"><a href="#/edit">Edit</a></div>
+<ul id="grid">
+ <li tabindex="0" ng-repeat="image in imageGrid" ng-click="say(image.text)" class="hide-{{image.hide}}">{{image.text}}
+ <a href="{{image.link}}">
+ <!-- <img src="{{image.url}}"/> -->
+ </a>
+ </li>
+ </ul>
