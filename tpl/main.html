@@ -1,8 +1,8 @@
 <div class="edit"><a href="#/edit">Edit</a></div>
 <ul id="grid">
- <li tabindex="0" ng-repeat="image in imageGrid" ng-click="say(image.text)" class="hide-{{image.hide}}">{{image.text}}
- <a href="{{image.link}}">
- <!-- <img src="{{image.url}}"/> -->
+ <li tabindex="0" ng-repeat="word in wordGrid" ng-click="say(word.text)" class="hide-{{word.hide}}">{{word.text}}
+ <a href="/word">
+ <!-- <img src="{{word.url}}"/> -->
  </a>
  </li>
  </ul>
