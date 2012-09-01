@@ -1,8 +1,10 @@
 HTML5-for-AAC
 =============
 
-web based app for the AAC community
+web based app for the AAC community - a mix of a few different versions in this project depending on which html file you view
 Demo - http://imedia-ventures.com/webAAC
+
+Demo sentence builder http://imedia-ventures.com/terry/index.html#/sentence
 
 Demo with images (click on train for audio) http://imedia-ventures.com/testgrid/
 
