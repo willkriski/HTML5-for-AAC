@@ -1,0 +1,3 @@
+curl -i -X POST -H "Content-type:application/json" http://wordspeakapp.appspot.com/rest/Category -d '{"Category": {"text":"People"}}'
+curl -i -X POST -H "Content-type:application/json" -data "@categoriesLoader.json" http://wordspeakapp.appspot.com/rest/Category
+curl -i -H "Content-type:application/json" -X POST -d "@categoriesLoader.json" "http://wordspeakapp.appspot.com/rest/Category"

@@ -1,6 +1,6 @@
-<div class="edit"><a href="#/edit">Edit</a></div>
+<br/>
 <ul id="grid">
- <li tabindex="0" ng-repeat="word in wordGrid" ng-click="say(word.text)" class="hide-{{word.hide}}">{{word.text}}
+ <li tabindex="0" ng-repeat="word in wordGrid | filter:page" ng-click="say(word)" ui-keypress="{ 13 : 'say(word)' }" class="hide-{{word.hide}} {{word.bgcolor}}">{{word.text}}
  <a href="/word">
  <!-- <img src="{{word.url}}"/> -->
  </a>

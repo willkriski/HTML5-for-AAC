@@ -1,0 +1,17 @@
+<br/><br/>
+<div class="sentence input-append">
+<input class="span9" type="text" size="100" value="{{getSentence()}}">
+<button class="btn btn-success" type="button"
+                        ng-click="say()">Speak
+                    </button>
+                    <button class="btn btn-success" type="button"
+                        ng-click="resetForm()">Clear
+                    </button>
+                </div>
+<ul id="grid">
+ <li tabindex="0" ng-repeat="word in wordGrid | filter:page" ng-click="add(word)" ui-keypress="{ 13 : 'say(word)' }" class="hide-{{word.hide}} {{word.bgcolor}}">{{word.text}}
+ <a href="/word">
+ <!-- <img src="{{word.url}}"/> -->
+ </a>
+ </li>
+ </ul>

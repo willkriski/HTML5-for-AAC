@@ -8,22 +8,57 @@ margin: 50px 100px 0px 540px;
 .save {
 margin: 50px 100px 0px 540px;
 }
+.sentence {
+  text-align: center;
+  margin:15px;
+}
+.sentence input {
+  font-weight: bold;
+}
 
 ul#grid {
   list-style: none;
   margin: 20px auto 0;
-  width: 765px;  /*was 468*/
+  width: 900px;  /*was 468*/
   }
 
 #grid li {
   float: left;
-  margin: 0px 5px 5px 5px;
+  margin: 0px 0px 0px 0px;
   text-align:center;
   border: solid 1px;
-  padding: 30px 5px 5px 5px;
-  width: 70px;
-  height: 60px;
-  } 
+  border-color:#000000;
+  padding: 3px 5px 5px 5px;
+  width: 100px;
+  height: 18px;
+  font-size: large;
+  }
+.red {
+  background-color:red;
+  color:white;
+}
+.yellow {
+  background-color:yellow;
+}
+.green {
+  background-color:green;
+}
+.orange {
+  background-color:orange;
+}
+.blue {
+  background-color:blule;
+}
+.purple {
+  background-color:purple;
+}
+.violet {
+  background-color:violet;
+}
+.lightcyan {
+  background-color:lightcyan;
+}
+
 .dim-true {opacity : 0.1;
     filter: alpha(opacity=10);
   }
